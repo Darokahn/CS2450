@@ -7,6 +7,7 @@ result = None
 name = input("first, your name: ")
 guessCount = 0
 while (result != 'y' and guessCount < 5):
+    print(f"guess {guessCount + 1}")
     guess = random.randint(0, 99)
     if (guessCount == 4):
         print("This is my last guess.")
