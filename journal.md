@@ -73,3 +73,36 @@ I have some very cool new aspirational projects:
 - A buffered SSH client bundled with a neovim extension that writes files remotely via scp, so remote development can be done with minimal latency. Top level bash prompt is interpreted, using buffers and interceptions to allow a seamless low-latency experience. stdin would be buffered when the client reasons that the host is interacting with a bash prompt (looks for a sentinel prompt). Malicious programs could easily fool it, but there would be little reason to. `vi`, `vim`, `nvim`, will be intercepted, and the user will instead be put into a local neovim instance that syncs reads and writes with the remote file being edited. The syncs would be done asynchronously, so the only latency across the system would be waiting for commands to return input.
 
 This might be best as a client-first passive-server model. Instead of the client maintaining a persistent connection with remote, it would cache a local virtual filesystem representing remote. Reads and writes would happen over scp, and as long as a file is being actively edited, syncs would happen frequently. That the client machine is the stage for changes would be made clear. Instead of being "travel to the remote server and make changes there", it would be "use this facade to modify the filesystem locally in a way that immediately syncs with remote." There would be a channel for running commands on remote, and it would ideally be convenient and ergonomic, but the idea would be oriented toward simple file editing, using the resources available on the client's filesystem.
+
+# Sat Oct 4
+## Journal entry 4
+Since yesterday, my assignments and personal projects haven't changed.
+
+Personal Project: Scratch VM
+
+School assignments: This journal, Notes and AI Chat
+
+A new aspirational project I imagined is a unique fixed-length text encoding that's essentially indexed text. Strings would be passed around along with a short header of unicode or unicode-like code points, and each character in the string that exceeds the ascii range (>128) would represent an index into this table. The header would also allow strings to specify 16-bit characters, allowing an essentially inexhaustible set of indices to specify. String operations would be more complex, as they would have to maintain this table, but it would be doable and enable a majority of english strings to be encoded with fixed-length characters. utf-8 allows several-byte characters, meaning indexing a string at n isn't guaranteed to give you the nth printable character.
+
+An interesting idea I had is that every data format sits on a spectrum from a hardware compatible buffer to a turing-complete interpreted language. Some data formats are very simple and essentially represent the exact values you would bit-bang onto the pins of a hardware device. Other data formats are the input to a turing-complete virtual machine. Most data formats sit somewhere on this spectrum, not cleanly on either side. The fundamental core of this idea is that all data are used to change what a computer will do. It's not a question of *whether* one piece of data in a stream will change how the computer will interpret other incoming data (A defensible definition of "code"), it's a question of *how much*. Code is essentially data folding back on itself, and the nature of all data is to what degree this happens.
+
+TTF is a good demonstration of this principle. The font format is actually a set of instructions for a glyph-drawing virtual machine, and it has been a surface for exploits and viruses before.
+
+This brings up a fundamental issue of sandboxing software. We can obviously see why sandboxing is important when we code a virtual machine that has access to system components. If we arbitrarily respect the intentions of all incoming data, malicious actors can cause serious issues. When we model all data as code by saying something like "all data must fundamentally have an effect on the running state of a program, or else it is not data.", then we can see the issue: interpreting all data is a matter of trust, and it's very easy to develop a system where input data has more power than you anticipated. Arbitrary Code Execution doesn't have to mean you're compiling users' data into rwx memory and then executing it. It can also mean that the nature of your format enables exploits via intended paths.
+
+# Sat Oct 4
+## Journal entry 5
+A quick extra entry today. No project overview because they haven't changed since earlier.
+It's funny how hard it really is to actually program on bare metal.
+
+When I started learning programming in python, I noticed there was a lot of code I wasn't writing. my question was "how do I do what these functions do, without using them? How do I accomplish this by myself?
+
+The answer was to look at a lower-level language like C, where all of the functions are implemented in that language. I realized that even in C, there were plenty of functions that I wasn't writing.
+
+So I learned assembly, and about how we use syscalls to accomplish common tasks - which are functions I didn't write,
+
+So finally I look into OS-less programming, where everything is up to you...
+
+And the functions provided by a table in the firmware, which I didn't write.
+
+We stand on the shoulders of giants.
