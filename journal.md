@@ -31,3 +31,45 @@ I have a few aspirational projects on my mind. These are things I'd like to star
 - An AI bytecode-like instruction format designed to dispatch tasks to AI in atomic ways, leaving no complete task to a single agent that wouldn't be capable of an accurate answer.
 - An NES emulator
 - A simple server that monitors all my email accounts and pushes new emails to a small screen in my room.
+
+# Mon Sep 22
+## Journal 2
+Professor Compas reminded me that I should be writing in my journal!
+
+I'm going to go over Personal projects, School assignments, and Aspirational projects again. I want to make this a per-entry routine.
+
+Right now, my largest personal project is still that Scratch VM. I got past the biggest hurdles in design and architecture, and it's solid right now. However, I'm up against some pretty frustrating bugs and the deadline is approaching. I need to have it done by the 13th next month or else I will have some issues. I do have time for this, though, especially with the break coming up.
+
+My current school assignments are: 
+
+- PPM menu (3005)
+- Notes and AI Chat (2810)
+- Project Pitch (2450)
+
+I went ahead and did the main assignments in 2810, so I only have the weekly notes submissions in that class. My homework load is really quite light this semester. In Spring, I should be able to take on a whole lot of CS classes, especially since I won't have a big project to worry about.
+
+I don't have any new aspirational projects right now.
+
+# Fri Oct 3
+## Journal 3
+My main personal project is still the Scratch VM. I didn't work on it a whole lot between the 22nd and now. I did finally squash one of those tricky bugs, though, and I'm not incredibly worried about it. Worst case scenario, I do have a while after the technical deadline to make it better. Getting one of those bugs out of the way also helped me to feel more confident about going forward.
+
+It's worth noting how strongly relevant and relatable Professor Compas' lectures on Software Engineering practices are to this project. It's almost like I make a mistake in the development process of this project, and the next week we talk about that exact mistake. Estimating timelines, defining issues and allocating timeframes/developer bandwidth, and creating efficient management systems are all obvious problems, but they don't have obvious solutions. I feel like as I bump into them on my project and then come up with my own solutions, I arrive pretty close to what Professor Compas talks about in class. But the lectures are incredibly helpful because they reinforce, clarify, and refine the solutions I come up with. And of course, it's often enough that I had no solution at all and the lectures provide one.
+
+My current school assignments are:
+
+- Notes and AI Chat (2810)
+- This Journal (2450)
+
+I'm still frustrated by that AI chat assignment. Russ stopped requiring the submission of notes, and so I stopped taking them. I've started just recalling and summarizing lectures instead.
+I also went ahead a few weeks in 3005, so that's taken care of for the time being. I've been slacking on the journal, though! I'll try to make an entry tomorrow or before I submit on the 5th.
+
+I have some very cool new aspirational projects:
+
+- A universal interactive app API that identifies matchable system specs and deploys the highest-performance API it can given the specs. Any system, no matter how strange, should be capable of streaming media data through stdin/stdout. This is low performance, but is fine as the worst possible fallback. The API will be written from a minimal form up for each system. Every app written with this API should work anywhere, but dedicated implementers can write a version of the API that takes advantage of hardware accelerations. I wrote a document about this that I'll put in this commit.
+- Extending the Image editor implementation we're making in 3005 to be a featured command line tool that feels as ergonomic and feature-complete as an industry standard. I would implement vimlike motions, cursor state, image edge/contour detection, advanced visual filters, bezier curve rendering, arbitrary polygon drawing, and text rendering.
+- A rehash of my old C json parser that I wrote before I had a really strong handle on C. It would be very interesting to see how far I've come.
+- A modified python version that optimizes it for bashlike ergonomics, and then a terminal emulator that uses this as the interpreter.
+- A buffered SSH client bundled with a neovim extension that writes files remotely via scp, so remote development can be done with minimal latency. Top level bash prompt is interpreted, using buffers and interceptions to allow a seamless low-latency experience. stdin would be buffered when the client reasons that the host is interacting with a bash prompt (looks for a sentinel prompt). Malicious programs could easily fool it, but there would be little reason to. `vi`, `vim`, `nvim`, will be intercepted, and the user will instead be put into a local neovim instance that syncs reads and writes with the remote file being edited. The syncs would be done asynchronously, so the only latency across the system would be waiting for commands to return input.
+
+This might be best as a client-first passive-server model. Instead of the client maintaining a persistent connection with remote, it would cache a local virtual filesystem representing remote. Reads and writes would happen over scp, and as long as a file is being actively edited, syncs would happen frequently. That the client machine is the stage for changes would be made clear. Instead of being "travel to the remote server and make changes there", it would be "use this facade to modify the filesystem locally in a way that immediately syncs with remote." There would be a channel for running commands on remote, and it would ideally be convenient and ergonomic, but the idea would be oriented toward simple file editing, using the resources available on the client's filesystem.
