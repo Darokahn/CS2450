@@ -94,7 +94,6 @@ TTF is a good demonstration of this principle. The font format is actually a set
 
 This brings up a fundamental issue of sandboxing software. We can obviously see why sandboxing is important when we code a virtual machine that has access to system components. If we arbitrarily respect the intentions of all incoming data, malicious actors can cause serious issues. When we model all data as code by saying something like "all data must fundamentally have an effect on the running state of a program, or else it is not data.", then we can see the issue: interpreting all data is a matter of trust, and it's very easy to develop a system where input data has more power than you anticipated. Arbitrary Code Execution doesn't have to mean you're compiling users' data into rwx memory and then executing it. It can also mean that the nature of your format enables exploits via intended paths.
 
-# Sat Oct 4
 ## Bare Metal
 
 A quick extra entry today. No project overview because they haven't changed since earlier.
