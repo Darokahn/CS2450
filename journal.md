@@ -91,7 +91,7 @@ TTF is a good demonstration of this principle. The font format is actually a set
 This brings up a fundamental issue of sandboxing software. We can obviously see why sandboxing is important when we code a virtual machine that has access to system components. If we arbitrarily respect the intentions of all incoming data, malicious actors can cause serious issues. When we model all data as code by saying something like "all data must fundamentally have an effect on the running state of a program, or else it is not data.", then we can see the issue: interpreting all data is a matter of trust, and it's very easy to develop a system where input data has more power than you anticipated. Arbitrary Code Execution doesn't have to mean you're compiling users' data into rwx memory and then executing it. It can also mean that the nature of your format enables exploits via intended paths.
 
 # Sat Oct 4
-## Journal entry 5
+## Bare Metal
 A quick extra entry today. No project overview because they haven't changed since earlier.
 It's funny how hard it really is to actually program on bare metal.
 
@@ -106,3 +106,15 @@ So finally I look into OS-less programming, where everything is up to you...
 And the functions provided by a table in the firmware, which I didn't write.
 
 We stand on the shoulders of giants.
+
+# Sun Oct 5
+## Rat idea
+
+We don't like rats in our homes. But why? Personally, if it wasn't for a few risks and damages, I'd love to know there's some little guys scurrying in my walls. I certainly hate the idea of killing them with traps.
+
+Rats chew on wires, leave droppings, and potentially spread disease. What if there were rats trained/bred to avoid these behaviors, including a little rat litter box, and to outcompete any untrained ones? Knowing rats are pretty smart, I suspect you could train them to avoid chewing wires and walls, and to leave droppings in a specific box. Rats from a lab are less likely to spread disease than rats from the outdoors.
+
+There's no way to make it practical I don't think, but I bet it's very possible for a lab to train and breed these domestic rats for homes so that wild rats don't infiltrate. If I had 1 billion dollars to spare, I would found this company.
+
+I have similar ideas for ants. If you can't beat em, breed and train versions of them that do your bidding and outcompete wild ones.
+
