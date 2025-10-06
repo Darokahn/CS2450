@@ -1,5 +1,6 @@
 # Fri Aug 29
 ## Engineering Journal
+
 I'm planning on using this journal to document my personal projects, school assignments, and aspirational projects.
 
 Personal projects are ones which I must complete for the sake of some non-academic interest; whether that be pure experimental curiosity or some professional requirement.
@@ -34,6 +35,7 @@ I have a few aspirational projects on my mind. These are things I'd like to star
 
 # Mon Sep 22
 ## Journal 2
+
 Professor Compas reminded me that I should be writing in my journal!
 
 I'm going to go over Personal projects, School assignments, and Aspirational projects again. I want to make this a per-entry routine.
@@ -52,6 +54,7 @@ I don't have any new aspirational projects right now.
 
 # Fri Oct 3
 ## Journal 3
+
 My main personal project is still the Scratch VM. I didn't work on it a whole lot between the 22nd and now. I did finally squash one of those tricky bugs, though, and I'm not incredibly worried about it. Worst case scenario, I do have a while after the technical deadline to make it better. Getting one of those bugs out of the way also helped me to feel more confident about going forward.
 
 It's worth noting how strongly relevant and relatable Professor Compas' lectures on Software Engineering practices are to this project. It's almost like I make a mistake in the development process of this project, and the next week we talk about that exact mistake. Estimating timelines, defining issues and allocating timeframes/developer bandwidth, and creating efficient management systems are all obvious problems, but they don't have obvious solutions. I feel like as I bump into them on my project and then come up with my own solutions, I arrive pretty close to what Professor Compas talks about in class. But the lectures are incredibly helpful because they reinforce, clarify, and refine the solutions I come up with. And of course, it's often enough that I had no solution at all and the lectures provide one.
@@ -76,6 +79,7 @@ This might be best as a client-first passive-server model. Instead of the client
 
 # Sat Oct 4
 ## Journal entry 4
+
 Since yesterday, my assignments and personal projects haven't changed.
 
 Personal Project: Scratch VM
@@ -92,6 +96,7 @@ This brings up a fundamental issue of sandboxing software. We can obviously see 
 
 # Sat Oct 4
 ## Bare Metal
+
 A quick extra entry today. No project overview because they haven't changed since earlier.
 It's funny how hard it really is to actually program on bare metal.
 
