@@ -92,7 +92,9 @@ This brings up a fundamental issue of sandboxing software. We can obviously see 
 
 # Sat Oct 4
 ## Bare Metal
+
 A quick extra entry today. No project overview because they haven't changed since earlier.
+
 It's funny how hard it really is to actually program on bare metal.
 
 When I started learning programming in python, I noticed there was a lot of code I wasn't writing. my question was "how do I do what these functions do, without using them? How do I accomplish this by myself?
@@ -103,7 +105,7 @@ So I learned assembly, and about how we use syscalls to accomplish common tasks 
 
 So finally I look into OS-less programming, where everything is up to you...
 
-And the functions provided by a table in the firmware, which I didn't write.
+Except, of course, the functions provided by a table in the firmware, which I didn't write.
 
 We stand on the shoulders of giants.
 
@@ -118,3 +120,10 @@ There's no way to make it practical I don't think, but I bet it's very possible 
 
 I have similar ideas for ants. If you can't beat em, breed and train versions of them that do your bidding and outcompete wild ones.
 
+
+# Mon Oct 6
+## Notes and AI Chat 2810
+
+Man, these assignments are just oppressive. I am not remotely a note taker, and I retain information just fine by paying attention in the lectures. I'm ahead weeks in assignments, I've scored full points on all the quizzes bar one where I missed one point, and I can summarize a week's lectures just fine. I understand that note taking is theoretically a good habit and it helps with retention, but I don't struggle with retention.
+
+All that would be fine if the assignments were <10% of my grade. If I could get a B without doing them assuming I got 100% on everything else, I think that would be fair game. But they're worth 25%! I can't get better than a C without doing them.
