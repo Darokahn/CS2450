@@ -122,3 +122,15 @@ There's no way to make it practical I don't think, but I bet it's very possible 
 
 I have similar ideas for ants. If you can't beat em, breed and train versions of them that do your bidding and outcompete wild ones.
 
+# Wed Oct 8
+## Funny Coincidences
+
+I haven't done a project indexing entry in a minute, so I'll do that quickly, although not much has changed.
+
+My personal project is still the Scratch VM. I have 5 more days to work on it, and although I'm nervous, it's going well. My meeting with Jeff yesterday was really helpful; if nothing else, then for his pep talk.
+
+I have no school assignments to do right now, which is a relief. I'm ahead in everything, though if I get too comfortable, I'll fall behind. I'm only a week ahead in 3005, and I'm only "ahead" in 2450 in that I'm caught up to this week a few days before I need to be. 2810 is fine, though, since I'm caught up to December in that class.
+
+No new aspirational projects, or at least nothing I've cared enough to remember.
+
+It's very funny to me how applicable this semester has been to the development of my Scratch VM. Between the fact that every week in Software Engineering feels like an eerie retelling of the mistakes I've made on this project, how 3005's assignments are very similar to my implementation of image processing, and how 2810 deals with the mechanics of the type of machine I'm emulating with my scratch machine, the classes I picked for this semester feel tailored to guide me through this project.
