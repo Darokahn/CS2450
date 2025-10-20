@@ -130,3 +130,17 @@ I have similar ideas for ants. If you can't beat em, breed and train versions of
 Man, these assignments are just oppressive. I am not remotely a note taker, and I retain information just fine by paying attention in the lectures. I'm ahead weeks in assignments, I've scored full points on all the quizzes bar one where I missed one point, and I can summarize a week's lectures just fine. I understand that note taking is theoretically a good habit and it helps with retention, but I don't struggle with retention.
 
 All that would be fine if the assignments were <10% of my grade. If I could get a B without doing them assuming I got 100% on everything else, I think that would be fair game. But they're worth 25%! I can't get better than a C without doing them.
+
+## A slight gripe
+
+I don't like when people describe things as being true "becuase of x's theorem" or similar. Nothing is true "because a scientist discovered it". A sufficient definition of the first principles of the universe necessarily also describes every true theorem. That definition is likely pretty brief. I guess my gripe is that theorems are a description of the truth, not the principles behind it. When people cite a theorem, they're really just saying "my proof that x is true depends on the research of y and their theorem", but they generally phrase it such that the theorem *is* the principle that makes x true rather than a description of a logical consequence of the universal principles that make x true.
+
+# Sat Oct 11
+## Manual Memory Allocation safety technique
+
+I had an idea for a memory allocation technique that could potentially ease a lot of the difficulties of manual management in low level code. If each allocation is owned by a stack frame and associated with that frame pointer, You can easily iterate over allocated blocks and tell which ones need to be freed by comparing against the current frame pointer. Very few allocations need to be done such that they *cannot* be linked to a stack frame, and those ones that do can default to typical memory allocation patterns.
+
+# Sun Oct 12
+## ESP Binary Patcher
+
+The ESP32 has a tool that can use webUSB to flash prepared executables via web browsers. The issue is that the executable must exist; There are currently no web tools of which I am aware for compiling ESP32 natively in-browser. These shouldn't really be that difficult to create via webAssembly ports, but I have an idea for a different solution. Probably not a better one, although it could potentially be more lightweight and might be better in some cases. The tool would take in specially prepared binaries, where they have been compiled with custom section data. This should allow the tool to read that section of the prepared elf and customize inner data. The tool would use a map to find and modify variables, and possibly even functions. Rather than compiling complete C or C++, it would compile a highly reduced scripting format. This would use very simple machine instructions, make no attempt at optimization, and it would not be intended for any amount of heavy lifting. It would essentially be a glue between the functions that are already defined, and way to dispatch them dynamically in a way that just variable editing can't do ergonomically. This would allow people to publish their scripts in a flashable format, while still allowing some customization and option editing.
