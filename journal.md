@@ -97,6 +97,7 @@ This brings up a fundamental issue of sandboxing software. We can obviously see 
 ## Bare Metal
 
 A quick extra entry today. No project overview because they haven't changed since earlier.
+
 It's funny how hard it really is to actually program on bare metal.
 
 When I started learning programming in python, I noticed there was a lot of code I wasn't writing. my question was "how do I do what these functions do, without using them? How do I accomplish this by myself?
@@ -107,7 +108,7 @@ So I learned assembly, and about how we use syscalls to accomplish common tasks 
 
 So finally I look into OS-less programming, where everything is up to you...
 
-And the functions provided by a table in the firmware, which I didn't write.
+Except, of course, the functions provided by a table in the firmware, which I didn't write.
 
 We stand on the shoulders of giants.
 
@@ -122,6 +123,17 @@ There's no way to make it practical I don't think, but I bet it's very possible 
 
 I have similar ideas for ants. If you can't beat em, breed and train versions of them that do your bidding and outcompete wild ones.
 
+# Mon Oct 6
+## Notes and AI Chat 2810
+
+Man, these assignments are just oppressive. I am not remotely a note taker, and I retain information just fine by paying attention in the lectures. I'm ahead weeks in assignments, I've scored full points on all the quizzes bar one where I missed one point, and I can summarize a week's lectures just fine. I understand that note taking is theoretically a good habit and it helps with retention, but I don't struggle with retention.
+
+All that would be fine if the assignments were <10% of my grade. If I could get a B without doing them assuming I got 100% on everything else, I think that would be fair game. But they're worth 25%! I can't get better than a C without doing them.
+
+## A slight gripe
+
+I don't like when people describe things as being true "becuase of x's theorem" or similar. Nothing is true "because a scientist discovered it". A sufficient definition of the first principles of the universe necessarily also describes every true theorem. That definition is likely pretty brief. I guess my gripe is that theorems are a description of the truth, not the principles behind it. When people cite a theorem, they're really just saying "my proof that x is true depends on the research of y and their theorem", but they generally phrase it such that the theorem *is* the principle that makes x true rather than a description of a logical consequence of the universal principles that make x true.
+
 # Wed Oct 8
 ## Funny Coincidences
 
@@ -134,3 +146,14 @@ I have no school assignments to do right now, which is a relief. I'm ahead in ev
 No new aspirational projects, or at least nothing I've cared enough to remember.
 
 It's very funny to me how applicable this semester has been to the development of my Scratch VM. Between the fact that every week in Software Engineering feels like an eerie retelling of the mistakes I've made on this project, how 3005's assignments are very similar to my implementation of image processing, and how 2810 deals with the mechanics of the type of machine I'm emulating with my scratch machine, the classes I picked for this semester feel tailored to guide me through this project.
+
+# Sat Oct 11
+## Manual Memory Allocation safety technique
+
+I had an idea for a memory allocation technique that could potentially ease a lot of the difficulties of manual management in low level code. If each allocation is owned by a stack frame and associated with that frame pointer, You can easily iterate over allocated blocks and tell which ones need to be freed by comparing against the current frame pointer. Very few allocations need to be done such that they *cannot* be linked to a stack frame, and those ones that do can default to typical memory allocation patterns.
+
+# Sun Oct 12
+## ESP Binary Patcher
+
+The ESP32 has a tool that can use webUSB to flash prepared executables via web browsers. The issue is that the executable must exist; There are currently no web tools of which I am aware for compiling ESP32 natively in-browser. These shouldn't really be that difficult to create via webAssembly ports, but I have an idea for a different solution. Probably not a better one, although it could potentially be more lightweight and might be better in some cases. The tool would take in specially prepared binaries, where they have been compiled with custom section data. This should allow the tool to read that section of the prepared elf and customize inner data. The tool would use a map to find and modify variables, and possibly even functions. Rather than compiling complete C or C++, it would compile a highly reduced scripting format. This would use very simple machine instructions, make no attempt at optimization, and it would not be intended for any amount of heavy lifting. It would essentially be a glue between the functions that are already defined, and way to dispatch them dynamically in a way that just variable editing can't do ergonomically. This would allow people to publish their scripts in a flashable format, while still allowing some customization and option editing.
+>>>>>>> refs/remotes/origin/main
