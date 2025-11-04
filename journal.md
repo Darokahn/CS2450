@@ -210,7 +210,7 @@ I had built a decimal addition calculator before I learnt python. It used a stat
 
 I had built a typewriter, where binary strings enumerated glyphs via a decoder, around the time I was introduced to programming languages. At that time, I realized I had been scared of formal programming languages for no reason. Python came naturally to me, and after plenty of discovery, I settled into an acceptable coding style. I wrote plenty of garbage code that I thought was innovative and proper at the time, heavily abusing python's introspective type system.
 
-After that, I coasted with Python for a while, writing a few neat games and other program types. I ignored my assignments and got bad grades, but I learnt so much.
+After that, I coasted with Python for a while, writing a few neat games and other program types. I ignored my assignments and got bad grades, but I learnt a lot.
 
 An itch still had to be scratched, though. I remembered my redstone days where I was touching bits directly. I knew that was the basic reality of computer science, but where was it? In python, it's almost nowhere to be found. Where does the print function come from? How do graphics applications draw to the screen? Where does all this complexity come from? I was frustrated, because I could not see the feet of the shoulders I stood on.
 
@@ -235,3 +235,13 @@ I picked up interest in rust, checked out a book on it from the library in Maryl
 Since that time, my growth has been pretty linear. At the end of that internship, I still wasn't a C expert by any means, but I consider myself something of a wizard in it almost a year later. I know it well enough to understand where it suffers from old design choices and I can actually reason about how to replace them with pragmatic, zero-cost syntax. I've written a low-level language doc that's essentially a revision on top of C and takes some decent inspiration from the naive one I wrote before. I've come very far from my humble beginnings, and I mainly have redstone to thank for my journey.
 
 I'd love to return to it soon, maybe make a full computer and write some programs for it. I've got some good ideas. Maybe when I have some more time.
+
+# Tue Nov 4
+## Four project ideas
+
+I have something important to work on, so I've got to jot these ideas down really quickly.
+
+- Command line argument parsing library. These exist, but I've got a good idea for one.
+- `Gitfriend`, a bot that watches what you do in a repository and helps with things like merges, commit messages, project status, issue management, etc. Lets you ask things like, "where is the function `printLogs`? and has a way to dispatch deterministic methods for answering questions, such as `grep`.
+- `Refactor`, a tokenizer-chatbot duo that lets you run coordinated, deterministic refactoring functions. database-like syntax, perhaps `refactor main.c for function "check function for correctness."` would prompt a new agent session to check each function for correctness individually. `refactor main.c for function "implement function if not implemented." Would let the chatbot do a global pass to collect necessary context.
+- A command line chat application where you only have two streams: an anonymous outgoing message queue, and an anonymous incoming message queue. When you send a message out, the algorithm determines which users would probably like to see your message. When you check your inbox, you can reply to users, but you can only either reply to the top message or discard it. You cannot see your full inbox at once. If you receive a reply in your inbox, the full context of the chat is included.
