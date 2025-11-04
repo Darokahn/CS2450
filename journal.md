@@ -163,3 +163,75 @@ The ESP32 has a tool that can use webUSB to flash prepared executables via web b
 I see lots of people posting online about Software as a Service, and the whole thing looks like a clown show to me. It looks like seminar after seminar of people shaking each others' hands about low-hanging ideas and coming up with cool new abbreviations and making up rules for what good software is and how to get hired. It's all so self-congratulatory, and I don't feel that I have evidence of its actual function. I think it's a particular mindset that irks me. Some people seem to go around the world seeing new things and thinking, "how can I use this? How can I turn this into new work for myself so I can engage in a superficial grind?", and that worldview is just incredibly poisonous to me. These people write linkedin posts about how "weddings are a great place to network", and I just don't buy it. The core of the issue, I think, is that these people refuse to acknowledge there are some types of lightning you just can't put into a bottle. Some things just get way worse when you try to cultivate them and capture what makes them good. Networking is great, and weddings might be a good place to do it! But the phenomenon these tech bros have tech-ified into "networking" is just Making Friends! How obvious is it that making friends is a productive thing to do? Tech bros drain the play out of things, try to make them efficient, and don't see how they've made something that was dead from the start. It's the same reason dating apps are terrible. Some tech bro probably saw an instance of people meeting on the internet and building a happy relationship and thought to himself, "how do I capture that in a bottle?" It's not necessarily a bad idea. But by trying to make that phenomenon reproducible and scalable, that tech bro lost sight of the play and freedom that made the original interaction successful in the first place. 
 
 A related gripe is a semi-belief I hold; something I don't quite rationally think is true, but a belief I find myself gravitating toward when I'm not paying attention. I tend to think that the rule is "Software is for games, curiosity, and exploration", and that's why I love it. I tend to imagine that any actual use for software is the exception to the rule, and while I'm glad it exists for the sake of my employment, I don't totally respect it. Software is foremost fun and intellectual, and useful by coincidence.
+
+# Tue Oct 21
+## Project Update
+
+I still want to make project update journal entries a regular thing, I just haven't had new updates recently.
+
+My assignments are pretty standard: Some 3005, some 2450, and some 2810. I didn't do the last Notes and AI chat, but I'll get the next one. Annoying how much it affects my grade. I'm running into a bit of Tortoise And The Hare with 3005, as I'm sincerely behind on an assignment for the first time in the semester. I submitted one late, but by 30 minutes. This is the first time I've actually had no progress on the assignment a day after it was due. The penalties are kind in this class, though, and I need to focus on polishing the scratch project for the time being. Professor Compas is understanding, and I think he may give me even more lenience because of how cool the scratch project is.
+
+My personal project continues to be the scratch project. I had it in the minimum viable state by the due date on the 13th, but it's still far from perfect and needs hours more of my attention.
+
+I'm writing this entry because I came up with the coolest aspirational project ever.
+
+I recently bought a vintage typewriter because I think the technology is cool. My idea is to hook up a reading mechanism to it (so that keypresses can be registered electronically) and a writing mechanism to it (so that a computer inside can pull levers and type on it automatically) and turn it into an analog unix terminal. I think I would be able to die happy if I had that machine in my room. What a cool idea.
+
+Imagine if I could hook it up to an LLM and have a haunted typewriter! I will try to do this over the Christmas Break.
+
+# Sat Nov 1
+## AI jobs
+
+I have felt a particular way about AI and its ability to take programmer jobs for a while, but I just now found the words to express it.
+
+The heart of the matter is that I have found no sincere proof that current AI agents, including any permutation of checked-balanced system, with any number of agentic peers, can do jobs more complicated than data entry.
+
+A *lot* of modern "programming" jobs are just barely different from entering data into excel spreadsheets. It's the same basic deal, with a different interface and slightly more complexity in the form of debugging.
+
+Almost all app/web design falls under this umbrella. Putting together html and CSS into a webpage is certainly under it. Hacking together a backend and a schema that uses no innovative technology is data entry. Using javascript to coordinate frontend state transfer is data entry. Maintaining an old system is data entry. A *lot* of programming jobs can and should be cut by AI, because they were essentially manual excel spreadsheet management to begin with.
+
+Real system design requires more context than agents have, at least for now. Checked-and-balanced models with access to running their code can get there eventually, but their low context window means all they can do is focus on one issue until it stops happening. Certain features lay across valleys of "irreducible complexity" where iterative, focused bug fixes cannot lead there.
+
+
+# Mon Nov 3
+## Minecraft Redstone
+
+I had a very odd start to my computer science journey. I started in Minecraft, where the in-game command system enables some pretty neat turing-complete behavior. I learned and experimented with that system for a very long time before I ever touched a formal programming language.
+
+It led me to explore the ingame logic system, which is not locked behind console commands, redstone.
+
+Redstone is a system which allows you to create, propagate, read, invert, and subtract logical levels enumerated from 0 to 15, inclusive, via a survival mode accessible set of blocktypes. It is fully turing complete, and with all components (or even a highly restricted subset), you can create any configuration of logic and state, and indeed complete computers.
+
+I was taught the basics of binary code some time along the line, and I intuited much of the rest. I looked up how to make an adder with redstone, but I didn't understand it. It was a somewhat optimized version, and it was based on logic gate configuration tables. Instead of learning to understand that directly, I sat on my knowledge of binary code until I figured out addition on my own.
+
+I intuited subtraction and two's complement, realizing that it generalized to any base.
+
+I had built a decimal addition calculator before I learnt python. It used a stateful clock system, where a 10-state clock was paused until given an input, how long to unpause for. Each loop, it would propagate a 1-tick unpause signal up. The clock would write to a 7-segment display, with each node corresponding to a different glyph on the display.
+
+I had built a typewriter, where binary strings enumerated glyphs via a decoder, around the time I was introduced to programming languages. At that time, I realized I had been scared of formal programming languages for no reason. Python came naturally to me, and after plenty of discovery, I settled into an acceptable coding style. I wrote plenty of garbage code that I thought was innovative and proper at the time, heavily abusing python's introspective type system.
+
+After that, I coasted with Python for a while, writing a few neat games and other program types. I ignored my assignments and got bad grades, but I learnt so much.
+
+An itch still had to be scratched, though. I remembered my redstone days where I was touching bits directly. I knew that was the basic reality of computer science, but where was it? In python, it's almost nowhere to be found. Where does the print function come from? How do graphics applications draw to the screen? Where does all this complexity come from? I was frustrated, because I could not see the feet of the shoulders I stood on.
+
+This got me curious about C programming, which I heard was the low-level fix I craved. I learnt the basic syntax, and I admired it, but it was too foreign from the python I was familiar with and I shelved it temporarily.
+
+I took a foray into web programming with Code School, a summer program offered by Utah Tech. I learnt javascript, built on some rudimentary html/css I had picked up from a prior class, and designed a cruddy little app. I was still a concurrent enrollment high schooler, and I teamed up with another high schooler even a year younger than myself, so we weren't expected to make anything great. Still, I learnt a lot and haven't forgotten it.
+
+I still had that itch. Learning javascript gave me some awesome ideas. It's really quite a cool language, despite its terrible quirks. Its closure state system is as cool as it is confusing. The ubiuqitous object syntax is very interesting. I took lessons from javascript and made a naive programming language specification. I had some cool ideas, but was ultimately out of touch with what a programming language can and can't do.
+
+Above, I suggested that I only dipped my toes into C, but I was actually pretty confident in my ability at the time. A bit of Dunning-Kruger for you. C can be deceptive that way, making you think you know the language before you really do. I had learned how to do the basic things, but if I were to write a C program, I would've still written it like python and gotten frustrated when python patterns were so heavy and full of friction. It wouldn't be until the following fall that I gained a deep understanding of the language.
+
+Learning C is really learning all the terrible things you can do with it and why you shouldn't do them. If you don't know 1000 different ways to cause a segfault, and if you just see a segfault as a unary despair, you aren't intimate with C. 
+
+The fall after code school, I took an internship across the states in Maryland. I spent my 9-5 hours as a daycare employee on a Navy base, keeping Navy kids fed, happy, and safe. I couldn't take any classes for my degree online, so I had little to do in my free hours. I made a habit of walking long distances, and that was very enriching, but I also rehashed my interest in C. This is where I really earned the right to say I knew it. I made a little asteroids game, introduced myself to SDL, banged my head against countless segfaults before I learned gdb, and actually began to look into assembly.
+
+My interest in assembly had been piqued before, but it always seemed far away. I only learned it really in passing, via C inline assembly. Inlining assembly in C is actually a pretty good crutch for learning it, although the syntax is dense. With a proper preprocessor allowing less obtuse assembly syntax, I would recommend it as a teaching method.
+
+I learnt some intel assembly, along with some ARM. I remember slaving over a C program that allocated some executable memory, wrote the machine code for some ARM instructions into it via binary literals, cast it to a function, and called it. That was pretty seriously cool.
+
+I picked up interest in rust, checked out a book on it from the library in Maryland, and decided it wasn't for me. Too bureaucratic for my tastes, though I do respect it in principle.
+
+Since that time, my growth has been pretty linear. At the end of that internship, I still wasn't a C expert by any means, but I consider myself something of a wizard in it almost a year later. I know it well enough to understand where it suffers from old design choices and I can actually reason about how to replace them with pragmatic, zero-cost syntax. I've written a low-level language doc that's essentially a revision on top of C and takes some decent inspiration from the naive one I wrote before. I've come very far from my humble beginnings, and I mainly have redstone to thank for my journey.
+
+I'd love to return to it soon, maybe make a full computer and write some programs for it. I've got some good ideas. Maybe when I have some more time.
